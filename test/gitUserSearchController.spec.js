@@ -30,6 +30,7 @@ describe('GitUserSearchController', function() {
     it('should display search results', function() {
       scope.searchTerm = 'world';
       scope.doSearch();
+      scope.$apply();
       expect(scope.searchResult.items).toEqual(items);
     });
   });
